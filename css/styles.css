@@ -916,3 +916,40 @@ h1, h2, h3, h4 { font-family: var(--font-display); margin: 0; }
 }
 .belt-knot::before { left: -4px; transform: rotate(18deg); }
 .belt-knot::after { right: -4px; transform: rotate(-18deg); }
+
+/* ===========================================
+   Phone polish (screens 600px and narrower)
+   Desktop is unaffected by everything below.
+   =========================================== */
+@media (max-width: 600px) {
+  /* Smaller logo on the homepage so the headline shows sooner */
+  .hero .container { gap: 28px; }
+  .hero-badge { gap: 14px; }
+  .hero-badge img { width: 130px; }
+  .est { font-size: 17px; }
+
+  /* Full-width, thumb-friendly buttons */
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn,
+  .teaser-copy .btn,
+  .cta-band .btn,
+  .strip .btn { display: block; width: 100%; }
+
+  /* Bigger tap targets for small links */
+  .footer-col a,
+  .contact-item a,
+  .initiative p a { display: inline-block; padding: 6px 0; }
+  .footer-col { gap: 4px; }
+
+  /* Tighter spacing on long pages */
+  .step { padding: 24px 0; }
+  .instructor { padding: 36px 0; }
+  .initiative { padding: 36px 0; }
+
+  /* Wall of Fame: two columns so 264 names aren't one endless list */
+  .wall { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; }
+  .wall li { gap: 8px; padding: 10px 0; }
+  .wall-num { font-size: 14px; width: 2.5ch; }
+  .wall-name { font-size: 17px; }
+  .wall-search { width: 100%; }
+}
