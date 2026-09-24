@@ -36,3 +36,7 @@ if (form && note) {
 // Keep the footer year current
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
+
+// Keep current year from blackbelt until today.
+const yearsTeaching = document.getElementById("years-teaching");
+if (yearsTeaching) yearsTeaching.textContent = new Date().getFullYear() - 1984;
