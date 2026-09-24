@@ -886,3 +886,32 @@ h1, h2, h3, h4 { font-family: var(--font-display); margin: 0; }
 @media (max-width: 1100px) { .wall { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 800px) { .wall { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 500px) { .wall { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Tied belt above the black belt count ---------- */
+.belt-tied { position: relative; width: min(240px, 60%); margin-bottom: 44px; }
+.belt-tied .beltbar { width: 100%; }
+.belt-knot {
+  position: absolute;
+  left: 50%;
+  top: -6px;
+  width: 40px;
+  height: 56px;
+  margin-left: -20px;
+  background: #141414;
+  border: 1px solid #2E2E2E;
+  border-radius: 6px;
+  z-index: 3;
+}
+.belt-knot::before,
+.belt-knot::after {
+  content: "";
+  position: absolute;
+  top: 44px;
+  width: 20px;
+  height: 46px;
+  background: #141414;
+  border-radius: 0 0 3px 3px;
+  transform-origin: top center;
+}
+.belt-knot::before { left: -4px; transform: rotate(18deg); }
+.belt-knot::after { right: -4px; transform: rotate(-18deg); }
